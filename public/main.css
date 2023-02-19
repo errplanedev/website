@@ -1,0 +1,90 @@
+@import url('./fonts.css');
+
+* {
+  font-weight: inherit;
+  font-family: inherit;
+  color: white;
+  box-sizing: border-box;
+}
+
+:root {
+  --red: #ff6266;
+}
+
+body {
+  background-color: #101010;
+  font-family: 'JetBrains Mono';
+  width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+hr {
+  border: none;
+}
+
+hr::after {
+  color: var(--red);
+  font-weight: bold;
+  content: ":::::::::::::::::::::::::::::::::::::::::::::::::::::::";
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+a {
+  color: var(--red);
+  text-decoration: none;
+  position: relative;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 250ms ease;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+}
+
+.post-title {
+  font-size: 2rem;
+}
+
+.post {
+  text-decoration: none;
+}
+
+.post-desc {
+  color: #aeaeae;
+  font-size: 1.5rem;
+}
+
+blockquote {
+  width: 100%;
+  border-left: 2px var(--red) solid;
+  padding: 0 16px 0 16px;
+  margin: 0;
+  font-style: italic;
+}

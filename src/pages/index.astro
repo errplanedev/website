@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+let posts = await Astro.glob("./posts/*.md");
+posts = posts.reverse();
+---
+
+<Layout title="errplane's blog">
+  <h1>errplane's blog</h1>
+  <hr />
+  {
+    posts.map((post) => (
+      <>
+        <a class="post" href={post.url}>
+          <div class="post-title">{post.frontmatter.title}</div>
+          <div class="post-desc">{post.frontmatter.desc}</div>
+        </a>
+        <br />
+      </>
+    ))
+  }
+</Layout>
