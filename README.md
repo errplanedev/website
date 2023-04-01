@@ -1,3 +1,4 @@
+**NOTICE: My new blog is built with [NextJS](https://nextjs.org), the repo has moved to [nextjs-site](https://github.com/errplanedev/nextjs-site)**
 # website
 My personal website.
 
